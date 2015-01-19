@@ -15,16 +15,12 @@ def is_divisible_by_15?(number)
 end
 
 def fizzbuzz?(number)
-  if is_divisible_by_15?(number)
-    return "FizzBuzz!"
-  elsif is_divisible_by_3?(number)
-    return "Fizz!"
-  elsif is_divisible_by_5?(number)
-    return "Buzz!"
-  else
-    return number
+  case
+    when is_divisible_by_15?(number) then 'FizzBuzz!'
+    when is_divisible_by_3?(number) then 'Fizz!'
+    when is_divisible_by_5?(number) then 'Buzz!'
+    else number
   end
-
 end
 
 
