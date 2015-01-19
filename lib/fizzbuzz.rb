@@ -11,5 +11,20 @@ def is_divisible_by_5?(number)
 end
 
 def is_divisible_by_15?(number)
-  is_divisible_by?(number, 15)
+  is_divisible_by_3?(number) && is_divisible_by_5?(number)
 end
+
+def fizzbuzz?(number)
+  if is_divisible_by_15?(number)
+    return "FizzBuzz!"
+  elsif is_divisible_by_3?(number)
+    return "Fizz!"
+  elsif is_divisible_by_5?(number)
+    return "Buzz!"
+  else
+    return number
+  end
+
+end
+
+
